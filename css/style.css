@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Schibsted Grotesk", sans-serif;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  padding-left: 10vw;
+}
+
+[class$="-text"] {
+  animation: fadeIn 2s forwards;
+}
+
+.clock-text {
+  font-size: 10em;
+  font-weight: 400;
+}
+
+.greeting-text {
+  font-size: 3em;
+}
+
+#login-form {
+  height: 65px;
+}
+
+#login-form input:first-child {
+  width: 300px;
+  height: 50px;
+  font-size: 2em;
+  color: #fff;
+  background-color: transparent;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.form input:focus {
+  outline: none;
+}
+.form input::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.weather-text {
+  margin-top: 10px;
+}
+
+.toDo {
+  margin-right: 25px;
+  padding: 10px 25px 20px 25px;
+  color: #000;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+
+.toDo h3 {
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.toDo input {
+  width: 200px;
+  height: 30px;
+  font-size: 1em;
+  color: #000;
+  background-color: transparent;
+  border-style: none;
+}
+.toDo input::placeholder {
+  color: darkgray;
+}
+
+.toDo button {
+  margin-left: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+.list-text li {
+  display: flex;
+  justify-content: space-between;
+  animation: fadeIn 1s forwards;
+  margin: 10px 0;
+  border-bottom: 1px solid #ddd;
+}

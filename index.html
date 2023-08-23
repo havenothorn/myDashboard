@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Dashboard</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="main">
+        <div class="quote">
+          <div id="quote" class="quote-text">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h2 id="clock" class="clock-text">00:00</h2>
+        <h1 id="greeting" class="greeting-text hidden"></h1>
+        <form id="login-form" class="form hidden">
+          <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="What is your name?"
+          />
+          <!-- <input type="submit" value="Log In" /> -->
+        </form>
+        <div id="weather" class="weather-text">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="widget">
+        <div class="toDo">
+          <h3>Daily Todo 📝</h3>
+          <form id="todo-form" class="form">
+            <input type="text" placeholder="New Todo" required />
+          </form>
+          <ul id="todo-list" class="list-text"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
+</html>
