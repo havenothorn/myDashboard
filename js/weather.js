@@ -7,12 +7,16 @@ function onGeoOK(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const weather = document.querySelector("#weather span:first-child");
-      const city = document.querySelector("#weather span:last-child");
-      city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main} / ${Math.round(
+      const weather = document.querySelector("#weather");
+      const weatherImg = document.createElement("img");
+      weatherImg.src = `../img/icons/${data.weather[0].icon}.png`;
+      weather.prepend(weatherImg);
+      const weatherTxt = weatherImg.nextElementSibling;
+      weatherTxt.innerText = `${data.weather[0].main} / ${Math.round(
         data.main.temp
-      )}°C`;
+      )}°C `;
+      const city = weather.querySelector("span:last-child");
+      city.innerText = data.name;
     });
 }
 function onGeoError() {
