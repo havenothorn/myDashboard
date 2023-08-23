@@ -96,8 +96,9 @@
 .toDo {
   margin-right: 25px;
   padding: 10px 25px 20px 25px;
-  color: #000;
-  background-color: rgb(255, 255, 255);
+  color: #fff;
+  background-color: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
 }
 
@@ -111,18 +112,24 @@
   width: 200px;
   height: 30px;
   font-size: 1em;
-  color: #000;
+  color: #fff;
   background-color: transparent;
   border-style: none;
 }
 .toDo input::placeholder {
-  color: darkgray;
+  color: #ddd;
 }
 
 .toDo button {
   margin-left: 5px;
+  color: #fff;
   border: none;
   background-color: transparent;
+}
+
+.list-text {
+  max-height: 150px;
+  overflow-y: scroll;
 }
 
 .list-text li {
@@ -130,5 +137,4 @@
   justify-content: space-between;
   animation: fadeIn 1s forwards;
   margin: 10px 0;
-  border-bottom: 1px solid #ddd;
 }
