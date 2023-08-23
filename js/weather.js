@@ -12,11 +12,12 @@ function onGeoOK(position) {
       weatherImg.src = `../img/icons/${data.weather[0].icon}.png`;
       weather.prepend(weatherImg);
       const weatherTxt = weatherImg.nextElementSibling;
-      weatherTxt.innerText = `${data.weather[0].main} / ${Math.round(
+      weatherTxt.innerText = `${data.weather[0].description} · ${Math.round(
         data.main.temp
       )}°C `;
       const city = weather.querySelector("span:last-child");
-      city.innerText = data.name;
+      city.innerText = `· 📍 ${data.name}`;
+      console.log(data.city);
     });
 }
 function onGeoError() {

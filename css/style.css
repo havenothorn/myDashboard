@@ -71,11 +71,26 @@
 .weather-text {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  width: fit-content;
+  margin-top: 15px;
+  padding: 0 15px 0 5px;
+  color: #fff;
+  font-weight: 400;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
 }
 
 .weather-text img {
-  width: 30px;
+  width: 35px;
+}
+
+.weather-text span:last-child {
+  margin-left: 5px;
 }
 
 .toDo {
