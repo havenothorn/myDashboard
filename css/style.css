@@ -97,9 +97,10 @@
   margin-right: 25px;
   padding: 10px 25px 20px 25px;
   color: #fff;
-  background-color: rgb(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
   border-radius: 15px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .toDo h3 {
@@ -117,19 +118,20 @@
   border-style: none;
 }
 .toDo input::placeholder {
-  color: #ddd;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .toDo button {
-  margin-left: 5px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .list-text {
   max-height: 150px;
   overflow-y: scroll;
+  margin-bottom: 15px;
 }
 
 .list-text li {
