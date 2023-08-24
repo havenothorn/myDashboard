@@ -1,6 +1,7 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
+const toDoDeleteAll = document.querySelector(".toDo button:last-child");
 
 const TODOS_KEY = "todos";
 
@@ -15,6 +16,11 @@ function deleteToDo(event) {
   li.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   saveToDos();
+}
+
+function deleteAll() {
+  toDoList.innerHTML = "";
+  localStorage.removeItem(TODOS_KEY);
 }
 
 function paintTodo(newTodo) {
@@ -44,6 +50,7 @@ function handleToDoSubmit(event) {
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+toDoDeleteAll.addEventListener("click", deleteAll);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
