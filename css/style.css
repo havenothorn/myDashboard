@@ -129,9 +129,11 @@
 }
 
 .list-text {
+  max-width: 205px;
   max-height: 150px;
   overflow-y: scroll;
   margin-bottom: 15px;
+  word-break: keep-all;
 }
 
 .list-text li {
