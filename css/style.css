@@ -141,4 +141,9 @@
   justify-content: space-between;
   animation: fadeIn 1s forwards;
   margin: 10px 0;
+  cursor: pointer;
+}
+
+.finished {
+  text-decoration: line-through;
 }

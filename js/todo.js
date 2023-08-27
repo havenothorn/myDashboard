@@ -11,6 +11,11 @@ function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
+function finishedToDo(event) {
+  const li = event.target;
+  li.classList.toggle("finished");
+}
+
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
@@ -31,6 +36,7 @@ function paintTodo(newTodo) {
   const button = document.createElement("button");
   button.innerText = "X";
   button.addEventListener("click", deleteToDo);
+  li.addEventListener("click", finishedToDo);
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
