@@ -7,7 +7,6 @@ const images = [
   "06.jpeg",
 ];
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
-bgImage = `img/${chosenImage}`;
 const bg = document.querySelector(".wrap");
-bg.style.backgroundImage = `url(${bgImage})`;
+const chosenImage = images[Math.floor(Math.random() * images.length)];
+bg.style.backgroundImage = `url(img/${chosenImage})`;
