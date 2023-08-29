@@ -51,9 +51,9 @@
 }
 
 #login-form input:first-child {
-  width: 300px;
+  width: 500px;
   height: 50px;
-  font-size: 2em;
+  font-size: 3em;
   color: #fff;
   background-color: transparent;
   border-style: none;
@@ -72,6 +72,7 @@
   display: flex;
   align-items: center;
   width: max-content;
+  height: 35px;
   margin-top: 15px;
   padding: 0 15px 0 5px;
   color: #fff;
