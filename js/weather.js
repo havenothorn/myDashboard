@@ -26,12 +26,18 @@ function onGeoOK(position) {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
   fetch(url)
-    .then((response) => response.json())
-    .then(displayWeather);
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not OK");
+      }
+      return response.json();
+    })
+    .then(displayWeather)
+    .catch(onGeoError);
 }
 
 function onGeoError() {
-  alert("Can't find you");
+  alert("Sorry, we couldn't find your location.");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOK, onGeoError);
