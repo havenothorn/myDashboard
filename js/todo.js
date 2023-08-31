@@ -1,7 +1,9 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
-const toDoDeleteAll = document.querySelector(".toDo button:last-child");
+const toDoDeleteAll = document.querySelector(
+  ".todo-container button:last-child"
+);
 
 const TODOS_KEY = "todos";
 
