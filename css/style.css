@@ -126,7 +126,8 @@
 }
 
 .todo-container button {
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.8);
   border: none;
   background-color: transparent;
   cursor: pointer;
