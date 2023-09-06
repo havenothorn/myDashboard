@@ -1,6 +1,15 @@
 const API_KEY = "9f673e84985d181d2f1c2b905365e177";
 
 const weather = document.querySelector("#weather");
+const loading = document.querySelector(".loading");
+
+function displayLoading() {
+  loading.classList.remove("hidden");
+}
+
+function hideLoading() {
+  loading.classList.add("hidden");
+}
 
 function displayWeather(data) {
   const { name } = data;
@@ -19,6 +28,8 @@ function displayWeather(data) {
   weather.appendChild(weatherImg);
   weather.appendChild(weatherTxt);
   weather.appendChild(city);
+
+  hideLoading();
 }
 
 function onGeoOK(position) {
@@ -41,3 +52,5 @@ function onGeoError() {
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOK, onGeoError);
+
+displayLoading();

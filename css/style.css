@@ -12,6 +12,15 @@
   }
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -75,7 +84,7 @@
   width: max-content;
   height: 35px;
   margin-top: 15px;
-  padding: 0 15px 0 5px;
+  padding: 0 15px 0 10px;
   color: #fff;
   font-weight: 400;
   background: linear-gradient(
@@ -94,6 +103,16 @@
 
 .weather-text span:last-child {
   margin-left: 5px;
+}
+
+.loading {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #c4c4c4;
+  border-radius: 100%;
+  animation: spin 1s infinite linear;
 }
 
 .todo-container {
