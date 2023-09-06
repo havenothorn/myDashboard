@@ -99,6 +99,11 @@
 
 .weather-text img {
   width: 35px;
+  animation: fadeIn 1s forwards;
+}
+
+.weather-text span {
+  animation: fadeIn 1s forwards;
 }
 
 .weather-text span:last-child {
