@@ -72,7 +72,7 @@
   padding-left: 10vw;
 }
 
-[class$="-text"] {
+.quote {
   animation: fadeIn 2s forwards;
 }
 
