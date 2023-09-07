@@ -5,6 +5,7 @@ const loading = document.querySelector(".loading");
 
 function displayLoading() {
   loading.classList.remove("hidden");
+  weather.classList.add("loading-background");
 }
 
 function hideLoading() {
@@ -28,6 +29,9 @@ function displayWeather(data) {
   weather.appendChild(weatherImg);
   weather.appendChild(weatherTxt);
   weather.appendChild(city);
+
+  weather.style.width = "max-content";
+  weather.classList.remove("loading-background");
 
   hideLoading();
 }
