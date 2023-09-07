@@ -76,9 +76,10 @@
   animation: fadeIn 2s forwards;
 }
 
-.clock-text {
+.clock {
   font-size: 10em;
   font-weight: 400;
+  animation: fadeIn 2s forwards;
 }
 
 .greeting-text {
