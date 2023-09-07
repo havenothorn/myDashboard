@@ -108,7 +108,7 @@
   opacity: 0.7;
 }
 
-.weather-text {
+.weather {
   display: flex;
   align-items: center;
   width: 300px;
@@ -132,16 +132,16 @@
   animation: skeleton-gradient 1.8s infinite ease-in-out;
 }
 
-.weather-text img {
+.weather img {
   width: 35px;
   animation: fadeIn 1s forwards;
 }
 
-.weather-text span {
+.weather span {
   animation: fadeIn 1s forwards;
 }
 
-.weather-text span:last-child {
+.weather span:last-child {
   margin-left: 5px;
 }
 

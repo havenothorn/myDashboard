@@ -1,6 +1,6 @@
 const API_KEY = "9f673e84985d181d2f1c2b905365e177";
 
-const weather = document.querySelector("#weather");
+const weather = document.querySelector(".weather");
 const loading = document.querySelector(".loading");
 
 function displayLoading() {
