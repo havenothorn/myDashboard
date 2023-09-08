@@ -1,11 +1,11 @@
 const API_KEY = "9f673e84985d181d2f1c2b905365e177";
 
 const weather = document.querySelector(".weather");
-const loading = document.querySelector(".loading");
+const loading = document.querySelector(".weather__loading");
 
 function displayLoading() {
   loading.classList.remove("hidden");
-  weather.classList.add("loading-background");
+  weather.classList.add("weather__loading--background");
 }
 
 function hideLoading() {
@@ -31,7 +31,7 @@ function displayWeather(data) {
   weather.appendChild(city);
 
   weather.style.width = "max-content";
-  weather.classList.remove("loading-background");
+  weather.classList.remove("weather__loading--background");
 
   hideLoading();
 }
