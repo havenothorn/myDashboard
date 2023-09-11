@@ -1,9 +1,7 @@
-const toDoForm = document.getElementById("todo-form");
-const toDoInput = document.querySelector("#todo-form input");
-const toDoList = document.getElementById("todo-list");
-const toDoDeleteAll = document.querySelector(
-  ".todo-container button:last-child"
-);
+const toDoForm = document.querySelector(".todo__form");
+const toDoInput = document.querySelector(".todo__form input");
+const toDoList = document.querySelector(".todo__list");
+const toDoDeleteAll = document.querySelector(".todo__delete");
 
 const TODOS_KEY = "todos";
 
@@ -15,7 +13,7 @@ function saveToDos() {
 
 function finishedToDo(event) {
   const span = event.target;
-  span.classList.toggle("finished");
+  span.classList.toggle("todo__list--finished");
 }
 
 function deleteToDo(event) {
